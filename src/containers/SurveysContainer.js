@@ -10,9 +10,7 @@ class SurveysContainer extends React.Component {
 
   componentDidMount() {
     this.props.fetchSurveys()
-    //fetch('http://localhost:3000/api/v1/surveys')
-    //.then(resp => resp.json())
-    //.then(surveys => console.log(surveys))
+
   }
 
   render() {

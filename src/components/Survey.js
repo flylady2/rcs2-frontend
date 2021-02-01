@@ -1,6 +1,6 @@
 import React from 'react';
 import ResponsesContainer from '../containers/ResponsesContainer';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, Switch} from 'react-router-dom';
 import ResponseInput from './ResponseInput';
 import {BrowserRouter as Router} from 'react-router-dom';
 
@@ -27,24 +27,11 @@ const Survey = (props) => {
       {choices && choices.map(choice =>
         <li key={choice.id}> {choice.content}</li>)}
     </h3>
-    <Router>
-      <Link to={'/responses/new'}>Create a Response</Link>
-      <Route path='/responses/new' component={ResponseInput} />
-    </Router>
+
       <ResponsesContainer survey={survey}/>
     </div>
-
-      //  <div>
-        //  {survey ? survey.attributes.choices.map(choice =>
-          //  <li key={survey.id}><Survey {...choice.content} />
-          //  </li>)}
-      //  </div>
 
 
   )
 }
 export default Survey;
-//{props.surveys && props.surveys.map(survey =>
-//  <li key={survey.id}>
-//    <Link to={`/surveys/${survey.id}`}>{survey.attributes.name}</Link>
-  //</li>)}
