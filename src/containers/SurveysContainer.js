@@ -9,6 +9,7 @@ import SurveyInput from '../components/SurveyInput';
 class SurveysContainer extends React.Component {
 
   componentDidMount() {
+
     this.props.fetchSurveys()
 
   }
@@ -26,6 +27,8 @@ class SurveysContainer extends React.Component {
 
           <Route path='/surveys' render={(routerProps) =>
             <Surveys {...routerProps} surveys={this.props.surveys}/>}/>
+
+
 
         </Switch>
       </div>

@@ -14,12 +14,13 @@ class ResponsesContainer extends React.Component {
     return (
       <div>
         <Router>
-
           {survey && <Link to={`/surveys/${survey.id}/responses/new`}>Create a Response</Link>}
           {survey && <Route path={`/surveys/${survey.id}/responses/new`}
             render={(routerProps) =>
           <ResponseInput {...routerProps} survey={survey} />} />}
-        
+
+
+
       </Router>
         //ResponsesContainer - {this.props.survey && this.props.survey.attributes.name}
       </div>
