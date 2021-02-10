@@ -11,14 +11,14 @@ const Surveys = (props) => {
   console.log(props)
   return (
     <div>
-      {props.surveys && props.surveys.surveys.map(survey =>
+      {props.surveys && props.surveys.map(survey =>
         <li key={survey.id} >
           <Link to={`/surveys/${survey.id}`}>{survey.attributes.name} </Link>
+      </li>)}
 
-        </li>)}
+
 
     </div>
   )
 }
 export default Surveys;
-//
