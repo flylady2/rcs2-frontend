@@ -14,12 +14,13 @@ class SurveyInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user_id: 1,//this.props.userId
+      user_id: 2,//this.props.userId
       name: "",
       choiceAContent: "",
       choiceBContent: "",
       choiceCContent: "",
-      choiceDContent: ""
+      choiceDContent: "",
+      threshold: ""
     }
   }
 
@@ -27,11 +28,6 @@ class SurveyInput extends React.Component {
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
-      //[event.target.user_id]: event.target.user_id,
-      //[event.target.choiceAContent]: event.target.choiceAContent,
-      //[event.target.choiceAContent]: event.target.choiceAContent,
-      //choiceAInitialScore: 0,
-      //choiceBInitialScore: 0
     })
   }
 
@@ -67,6 +63,9 @@ class SurveyInput extends React.Component {
           <br/>
           <label>Choice:</label>
           <input name="choiceDContent" type="content" value={this.state.choiceDContent} onChange={this.handleChange}/>
+          <br></br>
+          <label>Minimum number of responses to calculate a winner:</label>
+          <input name="threshold" type="number" value={this.state.threshold} onChange={this.handleChange} />
 
           <input type="submit"></input>
         </form>
