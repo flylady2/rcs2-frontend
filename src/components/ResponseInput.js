@@ -19,10 +19,11 @@ class ResponseInput extends React.Component {
   //    ranking2: "2",
   //    ranking3: "3",
     //  ranking4: "4",
-      ranking1_choiceId: 1,
-      ranking2_choiceId: 2,
-      ranking3_choiceId: 1,
-      ranking4_choiceId: 2
+
+      ranking1_choiceId: "",
+      ranking2_choiceId: "",
+      ranking3_choiceId: "",
+      ranking4_choiceId: ""
     }
   }
 
@@ -58,14 +59,18 @@ class ResponseInput extends React.Component {
       <div>
         ResponseInput
         <form onSubmit={this.handleSubmit}>
+
           <label>First choice: </label>
           <select name="ranking1_choiceId" value={this.state.ranking1_choiceId} onChange={this.handleChange}>
+            <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
             <option value={choice.id}> {choice.content}</option>)}
+
           </select>
           <br></br>
           <label>Second choice</label>
           <select name="ranking2_choiceId" value={this.state.ranking2_choiceId} onChange={this.handleChange}>
+            <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
               <option value={choice.id}> {choice.content}</option>)}
           </select>
@@ -73,12 +78,14 @@ class ResponseInput extends React.Component {
           </br>
           <label>Third choice</label>
           <select name="ranking3_choiceId" value={this.state.ranking3_choiceId} onChange={this.handleChange}>
+            <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
             <option value={choice.id}> {choice.content}</option>)}
           </select>
           <br></br>
           <label>Fourth choice</label>
           <select name="ranking4_choiceId" value={this.state.ranking4_choiceId} onChange={this.handleChange}>
+            <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
               <option value={choice.id}> {choice.content}</option>)}
           </select>

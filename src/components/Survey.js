@@ -8,8 +8,8 @@ import {BrowserRouter as Router} from 'react-router-dom';
 const Survey = (props) => {
 
 
-  //console.log(props)
-   let survey = props.surveys && props.surveys.surveys.find(survey => survey.id == parseInt(props.match.params.id))
+  //debugger;
+   let survey = props.surveys && props.surveys.find(survey => survey.id == parseInt(props.match.params.id))
 
 
   let choices = survey && survey.attributes.choices
