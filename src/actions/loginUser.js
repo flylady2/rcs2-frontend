@@ -1,9 +1,8 @@
 
-
-export function createUser(data) {
+export function loginUser(data) {
   //debugger;
-  return (dispatch) => {
-    fetch('http://localhost:3000/api/v1/signup',{
+  return(dispatch) => {
+    fetch('http://localhost:3000/api/v1/login',{
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -17,14 +16,12 @@ export function createUser(data) {
       if (data.error) {
         alert(data.error)
       } else {
-        localStorage.setItem('jwt_token', data.jwt)
+        localStorage.setItem('token', data.jwt)
         dispatch({
             type: 'CREATE_USER',
             payload: data.user
       })
-        //dispatch(loginUser(data.user))
       }
     })
-
   }
 }
