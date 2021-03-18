@@ -20,17 +20,20 @@ class SurveysContainer extends React.Component {
     return (
       <div>
         <Switch>
-          <Route path='/surveys/new' component={SurveyInput}/>
 
-          <Route path='/surveys/:id' render={(routerProps) =>
-            <Survey {...routerProps} surveys={this.props.surveys}/>}/>
+        <Route exact path='/surveys/new' component={SurveyInput}/>
 
-          <Route path='/surveys' render={(routerProps) =>
-            <Surveys {...routerProps} surveys={this.props.surveys}/>}/>
+        <Route exact path='/surveys/:id' render={(routerProps) =>
+          <Survey {...routerProps} surveys={this.props.surveys}/>}/>
+
+        <Route exact path='/surveys' render={(routerProps) =>
+          <Surveys {...routerProps} surveys={this.props.surveys}/>}/>
+
+      </Switch>
 
 
 
-        </Switch>
+
       </div>
     )
   }

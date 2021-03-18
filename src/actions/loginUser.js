@@ -16,7 +16,7 @@ export function loginUser(data) {
       if (data.error) {
         alert(data.error)
       } else {
-        localStorage.setItem('token', data.jwt)
+        localStorage.setItem('jwt_token', data.jwt)
         dispatch({
             type: 'CREATE_USER',
             payload: data.user

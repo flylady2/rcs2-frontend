@@ -3,7 +3,7 @@ export default function surveyReducer(state = [], action) {
     case "FETCH_SURVEYS":
       //debugger;
       return action.payload.surveys.data
-      //debugger;
+
     case "CREATE_SURVEY":
       //debugger;
       return [...state, action.payload.data]
