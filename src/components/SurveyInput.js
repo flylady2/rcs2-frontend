@@ -2,11 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {createSurvey} from '../actions/createSurvey'
 
-let initialScores = {
-  choiceAInitialScore: 0,
-  choiceBInitialScore: 0,
-  choiceCInitialScore: 0,
-  choiceDInitialScore: 0
+let initialWinnerValues = {
+  choiceAWinnerValue: false,
+  choiceBWinnerValue: false,
+  choiceCWinnerValue: false,
+  choiceDWinnerValue: false
 }
 
 class SurveyInput extends React.Component {
@@ -14,7 +14,7 @@ class SurveyInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user_id: 2,//this.props.userId
+      user_email: "",//this.props.userId
       name: "",
       choiceAContent: "",
       choiceBContent: "",
@@ -36,7 +36,7 @@ class SurveyInput extends React.Component {
     let survey = {
       //user_id: parseInt(this.props.user.id),
       ...this.state,
-      ...initialScores
+      ...initialWinnerValues
     }
     this.props.createSurvey(survey)
   }
@@ -52,9 +52,13 @@ class SurveyInput extends React.Component {
           <label>Survey Name:</label>
           <input name="name" type="text" value={this.state.name} onChange={this.handleChange}/>
           <br/>
+          <label>Your email:</label>
+          <input name="user_email" type="email" value={this.state.user_email} onChange={this.handleChange}/>
+          <br/>
           <label>Choice:</label>
           <input name="choiceAContent" type="content" value={this.state.choiceAContent} onChange={this.handleChange}/>
           <br/>
+
           <label>Choice:</label>
           <input name="choiceBContent" type="content" value={this.state.choiceBContent} onChange={this.handleChange}/>
           <br/>

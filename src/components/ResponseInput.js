@@ -13,7 +13,7 @@ class ResponseInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      respondent: "",
+      token: "",
     //  survey_id: this.props.survey.id,
   //    ranking1: "1", //will be a choice.id
   //    ranking2: "2",
@@ -31,12 +31,6 @@ class ResponseInput extends React.Component {
   handleChange = (event) => {
     //debugger;
     this.setState({
-    //  [event.target.respondent]: event.target.value,
-    //  survey_id: this.props.survey.id,
-    //  ranking1: "1", //will be a choice.id
-    //  ranking2: "2",
-    //  ranking3: "3",
-    //  ranking4: "4",
       [event.target.name]: event.target.value
 
     })
@@ -89,8 +83,8 @@ class ResponseInput extends React.Component {
             {survey.attributes.choices.map(choice =>
               <option value={choice.id}> {choice.content}</option>)}
           </select>
-          <label>Your name:</label>
-          <input type="text" name="respondent" value={this.state.respondent} onChange={this.handleChange}/>
+          <label>Your token:</label>
+          <input type="text" name="token" value={this.state.token} onChange={this.handleChange}/>
           <input type="submit"/>
         </form>
       </div>

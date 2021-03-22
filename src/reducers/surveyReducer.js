@@ -1,7 +1,7 @@
 export default function surveyReducer(state = [], action) {
   switch (action.type) {
     case "FETCH_SURVEYS":
-      //debugger;
+      
       return action.payload.surveys.data
       //debugger;
     case "CREATE_SURVEY":
