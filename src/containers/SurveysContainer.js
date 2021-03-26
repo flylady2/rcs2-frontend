@@ -22,7 +22,7 @@ class SurveysContainer extends React.Component {
         <Switch>
           <Route path='/surveys/new' component={SurveyInput}/>
 
-          <Route path='/surveys/:id' render={(routerProps) =>
+          <Route path='/surveys/:name' render={(routerProps) =>
             <Survey {...routerProps} surveys={this.props.surveys}/>}/>
 
           <Route path='/surveys' render={(routerProps) =>

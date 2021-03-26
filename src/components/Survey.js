@@ -9,7 +9,7 @@ const Survey = (props) => {
 
 
   //debugger;
-   let survey = props.surveys && props.surveys.find(survey => survey.id == parseInt(props.match.params.id))
+   let survey = props.surveys && props.surveys.find(survey => survey.attributes.name == props.match.params.name)
 
 
   let choices = survey && survey.attributes.choices
