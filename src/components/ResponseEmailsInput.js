@@ -8,7 +8,7 @@ import {sendEmails} from '../actions/sendEmails';
 
 
 class ResponseEmailsInput extends React.Component {
-
+  
 
 
   constructor(props) {
@@ -51,6 +51,7 @@ class ResponseEmailsInput extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>Respondent Emails:</label>
           <input name="respondent_email" type="email" value={this.state.respondent_email} onChange={this.handleChange}/>
+
 
 
           <input type="submit"></input>

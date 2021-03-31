@@ -1,6 +1,7 @@
 export function sendEmails(data) {
-  console.log(data)
-  return (dispatch) => {
+
+
+
     fetch('http://localhost:3000/api/v1/responses/emails',{
       headers: {
         "Content-Type": "application/json",
@@ -17,5 +18,5 @@ export function sendEmails(data) {
   //  }))
 
 
-  }
+
 }
