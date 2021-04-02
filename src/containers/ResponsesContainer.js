@@ -26,6 +26,12 @@ class ResponsesContainer extends React.Component {
           {survey && <Route path={`/surveys/${survey.attributes.name}/responses/new`}
             render={(routerProps) =>
           <ResponseInput {...routerProps} survey={survey} />} />}
+            <br></br>
+            {survey && <Link to={`/surveys/${survey.attributes.name}/responses`}>See how many responses this survey has</Link>}
+            {survey && <Route path={`/surveys/${survey.attributes.name}/responses`}
+              render={(routerProps) =>
+            <Responses {...routerProps} survey={survey} />} />}
+              <br></br>
           {survey && <Link to={`/surveys/${survey.attributes.name}/responses/emails`}>Email Respondents</Link>}
             {survey && <Route path={`/surveys/${survey.attributes.name}/responses/emails`}
               render={(routerProps) =>
