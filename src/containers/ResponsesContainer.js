@@ -1,6 +1,6 @@
 import React from 'react';
 import ResponseInput from '../components/ResponseInput';
-import EmailsInput from '../components/EmailsInput';
+import EmailsInput from '../components/MultipleEmailsForm';
 import Responses from '../components/Responses';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Link, Switch} from 'react-router-dom';
