@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import {sendEmails} from '../actions/sendEmails';
 
-function MultipleEmailsForm(props) {
+export function MultipleEmailsForm(props) {
 
   const survey_name = props.survey.attributes.name
   const response_link = `http://localhost:3001/surveys/${props.survey.attributes.name}/responses/new`
@@ -43,7 +43,7 @@ function MultipleEmailsForm(props) {
 
   return (
     <form onSubmit={e => {handleSubmit(e)}}>
-      <input type="button" value="Add email" onClick={addEmail}/>
+      
 
     {
       emailState.map((val, idx) => {
@@ -56,9 +56,9 @@ function MultipleEmailsForm(props) {
       );
       })
       }
+      <input type="button" value="Add email" onClick={addEmail}/>
       <input type="submit" value="Submit" />
     </form>
 
   )
 }
-export default MultipleEmailsForm;

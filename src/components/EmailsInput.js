@@ -6,6 +6,7 @@ function EmailsInput(props) {
 
   const survey_name = props.survey.attributes.name
   const response_link = `http://localhost:3001/surveys/${props.survey.attributes.name}/responses/new`
+
   const [respondentEmail, setRespondentEmail] = useState();
   const handleSubmit = (e) => {
     sendEmails({

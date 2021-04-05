@@ -1,6 +1,6 @@
 import React from 'react';
 import ResponseInput from '../components/ResponseInput';
-import EmailsInput from '../components/MultipleEmailsForm';
+import {MultipleEmailsForm} from '../components/MultipleEmailsForm';
 import Responses from '../components/Responses';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Link, Switch} from 'react-router-dom';
@@ -35,7 +35,7 @@ class ResponsesContainer extends React.Component {
           {survey && <Link to={`/surveys/${survey.attributes.name}/responses/emails`}>Email Respondents</Link>}
             {survey && <Route path={`/surveys/${survey.attributes.name}/responses/emails`}
               render={(routerProps) =>
-            <EmailsInput {...routerProps} survey={survey} />} />}
+            <MultipleEmailsForm {...routerProps} survey={survey} />} />}
       </Router>
       </div>
     )
