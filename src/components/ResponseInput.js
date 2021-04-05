@@ -83,6 +83,10 @@ class ResponseInput extends React.Component {
             {survey.attributes.choices.map(choice =>
               <option value={choice.id}> {choice.content}</option>)}
           </select>
+          <br></br>
+          <label>Your email:</label>
+          <input name="respondent_email" type="email" value={this.state.respondent_email} onChange={this.handleChange}/>
+          <br></br>
           <label>Your token:</label>
           <input type="text" name="token" value={this.state.token} onChange={this.handleChange}/>
           <input type="submit"/>
