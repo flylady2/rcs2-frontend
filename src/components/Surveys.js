@@ -13,7 +13,7 @@ const Surveys = (props) => {
     <div>
       {props.surveys && props.surveys.map(survey =>
         <li key={survey.id} >
-          <Link to={`/surveys/${survey.id}`}>{survey.attributes.name} </Link>
+          <Link to={`/surveys/${survey.attributes.name}`}>{survey.attributes.name} </Link>
       </li>)}
 
 
