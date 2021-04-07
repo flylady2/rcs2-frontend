@@ -14,6 +14,7 @@ class ResponseInput extends React.Component {
     super(props);
     this.state = {
       token: "",
+
     //  survey_id: this.props.survey.id,
   //    ranking1: "1", //will be a choice.id
   //    ranking2: "2",
