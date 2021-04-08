@@ -52,7 +52,7 @@ class ResponseInput extends React.Component {
     //debugger;
     return (
       <div>
-        ResponseInput
+        
         <form onSubmit={this.handleSubmit}>
 
           <label>First choice: </label>
