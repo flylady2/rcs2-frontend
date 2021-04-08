@@ -1,7 +1,9 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route, Link, NavLink} from 'react-router-dom';
 import Survey from './Survey';
 import ResponsesContainer from '../containers/ResponsesContainer';
+
+import ResponseInput from './ResponseInput';
 
 
 const Surveys = (props) => {
@@ -13,7 +15,9 @@ const Surveys = (props) => {
     <div>
       {props.surveys && props.surveys.map(survey =>
         <li key={survey.id} >
-          <Link to={`/surveys/${survey.attributes.name}`}>{survey.attributes.name} </Link>
+          <NavLink exact to={`/surveys/${survey.attributes.name}`}>{survey.attributes.name} </NavLink>
+
+
       </li>)}
 
 

@@ -12,7 +12,7 @@ const Responses = (props) => {
   return (
     <div id="parent">
       <div id="link">
-        <h1>The number of responses to the {props.survey.attributes.name} survey is {props.survey.relationships.responses.data.length}.</h1>
+        <h3>The number of responses to the {props.survey.attributes.name} survey is {props.survey.relationships.responses.data.length}.</h3>
       </div>
       <div id="form">
         <form onSubmit={e => {handleSubmit(e)}}>

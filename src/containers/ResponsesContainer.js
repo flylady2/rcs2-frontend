@@ -22,21 +22,12 @@ class ResponsesContainer extends React.Component {
     return (
       <div>
         <Router>
-          {survey && <NavLink exact to={`/surveys/${survey.attributes.name}/responses`}>See how many responses this survey has</NavLink>}
-          {survey && <Route path={`/surveys/${survey.attributes.name}/responses`}
-            render={(routerProps) =>
-          <Responses {...routerProps} survey={survey} />} />}
-            <br></br>
           {survey && <NavLink exact to={`/surveys/${survey.attributes.name}/responses/new`}>Create a Response</NavLink>}
-          {survey && <Route path={`/surveys/${survey.attributes.name}/responses/new`}
-            render={(routerProps) =>
-          <ResponseInput {...routerProps} survey={survey} />} />}
-            <br></br>
+          {survey && <Route exact path={`/surveys/${survey.attributes.name}/responses/new`}
+          render={(routerProps) =>
+            <ResponseInput {...routerProps} survey={survey} />} />}
+  
 
-          {survey && <NavLink to={`/surveys/${survey.attributes.name}/responses/emails`}>Email Respondents</NavLink>}
-            {survey && <Route path={`/surveys/${survey.attributes.name}/responses/emails`}
-              render={(routerProps) =>
-            <MultipleEmailsForm {...routerProps} survey={survey} />} />}
       </Router>
       </div>
     )
