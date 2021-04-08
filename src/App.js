@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import SurveysContainer from './containers/SurveysContainer';
-import UserFunctionsContainer from './containers/UserFunctionsContainer'
+import UserFunctionsContainer from './containers/UserFunctionsContainer';
 
 
 
