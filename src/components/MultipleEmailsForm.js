@@ -23,27 +23,23 @@ export function MultipleEmailsForm(props) {
     setEmailState(updatedEmails);
   };
   //const [respondentEmail, setRespondentEmail] = useState();
+
   const handleSubmit = (e) => {
+    const emailArray = []
     emailState.map((emailObj) => {
-      sendEmails({
+      emailArray.push({
         email: emailObj.email,
         survey_name: survey_name,
         response_link: response_link
-
       })
     })
-  //  sendEmails({
-  //    respondent_email: respondentEmail,
-  //    survey_name: survey_name,
-  //    response_link: response_link
-
-  //  })
-  //  e.preventDefault();
+      sendEmails(emailArray)
   }
+
 
   return (
     <form onSubmit={e => {handleSubmit(e)}}>
-      
+
 
     {
       emailState.map((val, idx) => {
