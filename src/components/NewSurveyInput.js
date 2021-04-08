@@ -36,7 +36,7 @@ class NewSurveyInput extends React.Component {
 
 //    }
     this.props.createSurvey(this.state);
-    this.props.history.push('/surveys');
+    this.props.history.push('/user/surveys');
   }
 
 
