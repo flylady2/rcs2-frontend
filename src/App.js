@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import SurveysContainer from './containers/SurveysContainer'
+import SurveysContainer from './containers/SurveysContainer';
+import UserFunctionsContainer from './containers/UserFunctionsContainer'
 
 
 
@@ -20,6 +21,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <SurveysContainer/>
+        <UserFunctionsContainer/>
 
       </div>
     );
