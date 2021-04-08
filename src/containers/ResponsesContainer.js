@@ -8,11 +8,11 @@ import {connect} from 'react-redux';
 import {fetchResponses} from '../actions/fetchResponses'
 
 class ResponsesContainer extends React.Component {
-  componentDidMount() {
+  //componentDidMount() {
 
-    this.props.fetchResponses()
+  //  this.props.fetchResponses()
 
-  }
+  //}
 
 
   render() {
@@ -26,7 +26,7 @@ class ResponsesContainer extends React.Component {
           {survey && <Route exact path={`/surveys/${survey.attributes.name}/responses/new`}
           render={(routerProps) =>
             <ResponseInput {...routerProps} survey={survey} />} />}
-  
+
 
       </Router>
       </div>
@@ -34,9 +34,9 @@ class ResponsesContainer extends React.Component {
   }
 }
 
-    const mapStateToProps = state => {
-      return {
-        responses: state.responses
-      }
-    }
-export default connect (mapStateToProps, {fetchResponses})(ResponsesContainer);
+//    const mapStateToProps = state => {
+//      return {
+//        responses: state.responses
+//      }
+//    }
+export default connect (null, {fetchResponses})(ResponsesContainer);

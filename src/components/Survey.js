@@ -26,7 +26,7 @@ const Survey = (props) => {
       </h3>
 
 
-      <UserFunctionsContainer survey={survey}/>
+      
       <ResponsesContainer survey={survey}/>
 
 
