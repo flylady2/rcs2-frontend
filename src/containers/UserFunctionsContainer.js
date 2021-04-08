@@ -8,6 +8,7 @@ import {fetchSurveys} from '../actions/fetchSurveys';
 import UserFunctions from '../components/UserFunctions';
 import UserSurveys from '../components/UserSurveys';
 import UserSurvey from '../components/UserSurvey';
+import NewSurveyInput from '../components/NewSurveyInput';
 
 class UserFunctionsContainer extends React.Component {
 
@@ -25,6 +26,8 @@ class UserFunctionsContainer extends React.Component {
     return (
       <div>
       <Switch>
+
+        <Route path='/user/surveys/new' component={NewSurveyInput}/>
 
 
         <Route path='/user/surveys/:name' render={(routerProps) =>

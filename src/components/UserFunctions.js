@@ -6,14 +6,16 @@ import {ResponseNumber} from '../components/ResponseNumber';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, NavLink, Link, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchResponses} from '../actions/fetchResponses'
+import {deleteSurvey} from '../actions/deleteSurvey'
 
 class UserFunctions extends React.Component {
-  componentDidMount() {
+  handleOnClick = () => {
 
-    this.props.fetchResponses()
+    this.props.deleteSurvey({id: this.props.survey.id});
+    
 
   }
+
 
 
   render() {
@@ -33,17 +35,17 @@ class UserFunctions extends React.Component {
         {survey && <Route path={`/user/surveys/${survey.attributes.name}/responses/emails`}
         render={(routerProps) =>
         <MultipleEmailsForm {...routerProps} survey={survey} />} />}
-
+          <br></br>
 
       </Router>
+      <br></br>
+      <button onClick={this.handleOnClick}>
+      Delete this survey
+    </button>
       </div>
     )
   }
 }
 
-    const mapStateToProps = state => {
-      return {
-        responses: state.responses
-      }
-    }
-export default connect (mapStateToProps, {fetchResponses})(UserFunctions);
+
+export default connect (null, {deleteSurvey})(UserFunctions);
