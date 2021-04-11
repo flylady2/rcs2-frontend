@@ -13,15 +13,17 @@ const UserSurveys = (props) => {
   console.log(props)
   return (
     <div>
-      {props.surveys && props.surveys.map(survey =>
-        <li key={survey.id} >
+      <div>
+        {props.surveys && props.surveys.map(survey =>
+          <li key={survey.id} >
           <NavLink exact to={`/user/surveys/${survey.attributes.name}`}>{survey.attributes.name} </NavLink>
-
-
-      </li>)}
-
-
-
+          </li>)}
+      </div>
+      <br></br>
+      <div>
+        <NavLink exact to={`/user/surveys/new`}>Create a new survey</NavLink>
+        <Route exact path={`/user/surveys/new`} />
+      </div>
     </div>
   )
 }
