@@ -22,7 +22,7 @@ class ResponsesContainer extends React.Component {
     return (
       <div>
         <Router>
-          {survey && <NavLink exact to={`/surveys/${survey.attributes.name}/responses/new`}>Create a Response</NavLink>}
+
           {survey && <Route exact path={`/surveys/${survey.attributes.name}/responses/new`}
           render={(routerProps) =>
             <ResponseInput {...routerProps} survey={survey} />} />}
@@ -40,3 +40,4 @@ class ResponsesContainer extends React.Component {
 //      }
 //    }
 export default connect (null, {fetchResponses})(ResponsesContainer);
+//<Route path='/user/surveys/new' component={NewSurveyInput}/>
