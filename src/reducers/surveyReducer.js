@@ -9,7 +9,8 @@ export default function surveyReducer(state = [], action) {
       return [...state, action.payload.data]
 
     case "DELETE_SURVEY":
-      return [...state.filter(survey => survey.id !== action.id)]
+      
+      return [...state.filter(survey => survey.id !== action.payload.data.id)]
 
     default:
       return state

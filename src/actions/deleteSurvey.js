@@ -11,9 +11,9 @@ export function deleteSurvey(idObj) {
       body: JSON.stringify(idObj)
     })
     .then(resp => resp.json())
-    .then(idObj => dispatch({
+    .then(survey => dispatch({
       type: 'DELETE_SURVEY',
-      payload: idObj
+      payload: survey
     }))
 
   }
