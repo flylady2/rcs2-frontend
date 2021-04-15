@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponseInput from '../components/ResponseInput';
+import NewResponseInput from '../components/NewResponseInput';
 import {MultipleEmailsForm} from '../components/MultipleEmailsForm';
 import Responses from '../components/Responses';
 import {BrowserRouter as Router} from 'react-router-dom';
@@ -25,7 +25,7 @@ class ResponsesContainer extends React.Component {
 
           {survey && <Route exact path={`/surveys/${survey.attributes.name}/responses/new`}
           render={(routerProps) =>
-            <ResponseInput {...routerProps} survey={survey} />} />}
+            <NewResponseInput {...routerProps} survey={survey} />} />}
 
 
       </Router>
