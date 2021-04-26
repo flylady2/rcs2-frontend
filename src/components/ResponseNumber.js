@@ -2,7 +2,7 @@ import React from 'react';
 import {triggerCalculation} from '../actions/triggerCalculation';
 
 
-const Responses = (props) => {
+export const ResponseNumber = (props) => {
   const handleSubmit = (e) => {
     triggerCalculation(props.survey)
     e.preventDefault();
@@ -23,4 +23,4 @@ const Responses = (props) => {
     </div>
   )
 }
-export default Responses;
+//export default ResponseNumber;

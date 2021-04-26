@@ -1,8 +1,8 @@
 import React from 'react';
-import ResponsesContainer from '../containers/ResponsesContainer';
+import UserFunctions from '../components/UserFunctions';
 
 
-const Survey = (props) => {
+const UserSurvey = (props) => {
 
 
   //debugger;
@@ -21,9 +21,7 @@ const Survey = (props) => {
           <li key={choice.id}> {choice.content}</li>)}
       </h3>
 
-
-
-      <ResponsesContainer survey={survey}/>
+      <UserFunctions survey={survey}/>
 
 
     </div>
@@ -32,6 +30,6 @@ const Survey = (props) => {
   )
 }
 
-export default Survey;
+export default UserSurvey;
 //<ResponseInput {...routerProps} survey={survey} />} />}
 //<ResponsesContainer survey={survey}/>

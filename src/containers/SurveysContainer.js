@@ -2,9 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom';
 import {fetchSurveys} from '../actions/fetchSurveys'
-import Surveys from '../components/Surveys';
+//import Surveys from '../components/Surveys';
 import Survey from '../components/Survey';
-import NewSurveyInput from '../components/NewSurveyInput';
+
 
 class SurveysContainer extends React.Component {
 
@@ -20,13 +20,10 @@ class SurveysContainer extends React.Component {
     return (
       <div>
         <Switch>
-          <Route path='/surveys/new' component={NewSurveyInput}/>
+
 
           <Route path='/surveys/:name' render={(routerProps) =>
             <Survey {...routerProps} surveys={this.props.surveys}/>}/>
-
-          <Route path='/surveys' render={(routerProps) =>
-            <Surveys {...routerProps} surveys={this.props.surveys}/>}/>
 
 
 
@@ -45,3 +42,6 @@ class SurveysContainer extends React.Component {
 
 
 export default connect(mapStateToProps, {fetchSurveys})(SurveysContainer)
+
+        //  <Route path='/surveys' render={(routerProps) =>
+        //    <Surveys {...routerProps} surveys={this.props.surveys}/>}/>

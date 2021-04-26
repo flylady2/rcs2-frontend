@@ -17,7 +17,7 @@ class NewSurveyInput extends React.Component {
     if (["content"].includes(e.target.className)) {
       let choices = [...this.state.choices]
       choices[e.target.dataset.id][e.target.className] = e.target.value
-      this.setState({ choices}, () => console.log(this.state.cats))
+      this.setState({ choices})
     } else {
       this.setState({ [e.target.name]: e.target.value})
     }
@@ -36,7 +36,7 @@ class NewSurveyInput extends React.Component {
 
 //    }
     this.props.createSurvey(this.state);
-    this.props.history.push('/surveys');
+    this.props.history.push('/user/surveys');
   }
 
 

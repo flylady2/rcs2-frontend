@@ -1,5 +1,5 @@
 export function createResponse(response) {
-  //debugger;
+
   return (dispatch) => {
     fetch(`http://localhost:3000/api/v1/surveys/${response.survey_id}/responses`, {
       headers: {
