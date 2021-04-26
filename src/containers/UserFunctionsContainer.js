@@ -1,11 +1,7 @@
 import React from 'react';
-import {ResponseNumber} from '../components/ResponseNumber';
-import {MultipleEmailsForm} from '../components/MultipleEmailsForm';
-import {BrowserRouter as Router} from 'react-router-dom';
-import {Route, NavLink, Link, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {fetchSurveys} from '../actions/fetchSurveys';
-import UserFunctions from '../components/UserFunctions';
 import UserSurveys from '../components/UserSurveys';
 import UserSurvey from '../components/UserSurvey';
 import NewSurveyInput from '../components/NewSurveyInput';

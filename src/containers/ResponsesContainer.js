@@ -1,9 +1,7 @@
 import React from 'react';
 import NewResponseInput from '../components/NewResponseInput';
-import {MultipleEmailsForm} from '../components/MultipleEmailsForm';
-import Responses from '../components/Responses';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {Route, NavLink, Link, Switch} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {fetchResponses} from '../actions/fetchResponses'
 
