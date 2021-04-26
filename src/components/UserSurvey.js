@@ -1,8 +1,4 @@
 import React from 'react';
-
-import {Route, Link, Switch} from 'react-router-dom';
-
-import {BrowserRouter as Router} from 'react-router-dom';
 import UserFunctions from '../components/UserFunctions';
 
 
@@ -10,7 +6,7 @@ const UserSurvey = (props) => {
 
 
   //debugger;
-   let survey = props.surveys && props.surveys.find(survey => survey.attributes.name == props.match.params.name)
+   let survey = props.surveys && props.surveys.find(survey => survey.attributes.name === props.match.params.name)
 
 
   let choices = survey && survey.attributes.choices

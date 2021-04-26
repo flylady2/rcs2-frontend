@@ -1,6 +1,6 @@
 import React from 'react';
-import {Route, Link, NavLink} from 'react-router-dom';
-import UserSurvey from './UserSurvey';
+import {Route, NavLink} from 'react-router-dom';
+
 
 
 
