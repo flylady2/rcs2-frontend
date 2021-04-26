@@ -1,5 +1,5 @@
 export function createSurvey(data) {
-  
+
   return (dispatch) => {
     fetch('http://localhost:3000/api/v1/surveys',{
       headers: {
