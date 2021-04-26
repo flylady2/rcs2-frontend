@@ -10,32 +10,24 @@ class NewResponseInput extends React.Component {
 state = {
       token: "",
       respondent_email: "",
-      survey_id: parseInt(this.props.survey.id),
-
-
+      survey_id: parseInt(this.props.survey.id)
   }
 
 
   handleChange = (e) => {
-
-
       this.setState({[e.target.name]: e.target.value})
-
-
   }
+
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     this.props.createResponse(this.state)
-
   }
 
   render() {
     let survey = this.props.survey
 
     let choices = survey.attributes.choices
-    let number_of_choices = choices.length
 
 
     return (

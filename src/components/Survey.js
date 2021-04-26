@@ -1,16 +1,12 @@
 import React from 'react';
 import ResponsesContainer from '../containers/ResponsesContainer';
-import {Route, Link, Switch} from 'react-router-dom';
-import ResponseInput from './ResponseInput';
-import UserFunctionsContainer from '../containers/UserFunctionsContainer';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 
 const Survey = (props) => {
 
 
   //debugger;
-   let survey = props.surveys && props.surveys.find(survey => survey.attributes.name == props.match.params.name)
+   let survey = props.surveys && props.surveys.find(survey => survey.attributes.name === props.match.params.name)
 
 
   let choices = survey && survey.attributes.choices
@@ -26,7 +22,7 @@ const Survey = (props) => {
       </h3>
 
 
-      
+
       <ResponsesContainer survey={survey}/>
 
 
