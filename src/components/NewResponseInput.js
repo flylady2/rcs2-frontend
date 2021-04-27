@@ -31,7 +31,7 @@ state = {
 
 
     return (
-      <div>
+      <div className = "form-group">
 
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
 
