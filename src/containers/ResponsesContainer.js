@@ -2,7 +2,7 @@ import React from 'react';
 import NewResponseInput from '../components/NewResponseInput';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route} from 'react-router-dom';
-import {connect} from 'react-redux';
+
 //import {fetchResponses} from '../actions/fetchResponses'
 
 class ResponsesContainer extends React.Component {
