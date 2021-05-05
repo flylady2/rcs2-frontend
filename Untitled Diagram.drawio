@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-05-05T21:21:28.555Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="Ker1qnLMoFdpYDRarYfv" version="14.6.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-05-05T21:23:08.774Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="3hBeed-qF_-mmi8RxpeA" version="14.6.10" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1616" dy="1715" grid="1" gridSize="12" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -140,7 +140,7 @@
           <mxGeometry x="95.5" y="-12" width="96.5" height="54" as="geometry" />
         </mxCell>
         <mxCell id="29_xuqQsDgObVxGRh2MQ-53" value="Update rankings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="95.5" y="120" width="108" height="48" as="geometry" />
+          <mxGeometry x="89.75" y="132" width="108" height="48" as="geometry" />
         </mxCell>
         <mxCell id="29_xuqQsDgObVxGRh2MQ-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -222,8 +222,8 @@
             <mxPoint x="84" y="-1104" as="targetPoint" />
             <Array as="points">
               <mxPoint x="144" y="230" />
-              <mxPoint x="516" y="230" />
-              <mxPoint x="516" y="-1104" />
+              <mxPoint x="408" y="230" />
+              <mxPoint x="408" y="-1104" />
             </Array>
           </mxGeometry>
         </mxCell>
