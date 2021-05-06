@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+![Flowchart](/Users/Leslie/development/projects/rcs2-frontend/Flowchart_jpeg.jpg)
+
+![Flowchart](/Users/Leslie/development/projects/rcs2-frontend/Flowchartv5.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
