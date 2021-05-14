@@ -1,6 +1,5 @@
 export function sendEmails(data) {
 
-  
 
     fetch('http://localhost:3000/api/v1/responses/emails',{
       headers: {
