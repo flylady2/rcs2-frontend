@@ -3,20 +3,15 @@ import NewResponseInput from '../components/NewResponseInput';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 
-//import {fetchResponses} from '../actions/fetchResponses'
+
 
 class ResponsesContainer extends React.Component {
-  //componentDidMount() {
 
-  //  this.props.fetchResponses()
-
-  //}
 
 
   render() {
     let survey = this.props.survey && this.props.survey
-    //debugger;
-    //let survey = this.props.survey
+
     return (
       <div>
         <Router>
@@ -32,12 +27,5 @@ class ResponsesContainer extends React.Component {
   }
 }
 
-//    const mapStateToProps = state => {
-//      return {
-//        responses: state.responses
-//      }
-//    }
-export default ResponsesContainer;
-//export default connect (null, {fetchResponses})(ResponsesContainer);
 
-//<Route path='/user/surveys/new' component={NewSurveyInput}/>
+export default ResponsesContainer;
