@@ -19,8 +19,7 @@ class UserFunctions extends React.Component {
 
   render() {
     let survey = this.props.survey && this.props.survey
-    //debugger;
-    //let survey = this.props.survey
+
     return (
       <div>
         <Router>

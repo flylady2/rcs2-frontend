@@ -2,15 +2,9 @@ import React from 'react';
 import {Route, NavLink} from 'react-router-dom';
 
 
-
-
-
-
 const UserSurveys = (props) => {
 
 
-//debugger;
-  console.log(props)
   return (
     <div>
       <div>
