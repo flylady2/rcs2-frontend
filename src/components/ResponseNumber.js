@@ -7,7 +7,7 @@ export const ResponseNumber = (props) => {
     triggerCalculation(props.survey)
     e.preventDefault();
   }
-  //debugger;
+
 
   return (
     <div id="parent">
@@ -23,4 +23,3 @@ export const ResponseNumber = (props) => {
     </div>
   )
 }
-//export default ResponseNumber;

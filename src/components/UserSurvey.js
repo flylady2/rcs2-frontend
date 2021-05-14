@@ -5,7 +5,6 @@ import UserFunctions from '../components/UserFunctions';
 const UserSurvey = (props) => {
 
 
-  //debugger;
    let survey = props.surveys && props.surveys.find(survey => survey.attributes.name === props.match.params.name)
 
 
@@ -31,5 +30,3 @@ const UserSurvey = (props) => {
 }
 
 export default UserSurvey;
-//<ResponseInput {...routerProps} survey={survey} />} />}
-//<ResponsesContainer survey={survey}/>

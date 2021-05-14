@@ -31,8 +31,7 @@ class NewSurveyInput extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-//    let survey = {
-//      ...this.state,
+//
 
 //    }
     this.props.createSurvey(this.state);
@@ -45,7 +44,7 @@ class NewSurveyInput extends React.Component {
 
 
     return (
-      <div>
+      <div className="form-group">
         <form onSubmit={this.handleSubmit} >
           <label htmlFor="name">Name of Survey</label>
           <input type="text" name="name" id="name" onChange={this.handleChange}/>

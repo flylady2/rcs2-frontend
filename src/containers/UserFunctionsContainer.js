@@ -17,8 +17,6 @@ class UserFunctionsContainer extends React.Component {
 
   render() {
 
-    //debugger;
-    //let survey = this.props.survey
     return (
       <div>
       <Switch>

@@ -31,7 +31,7 @@ state = {
 
 
     return (
-      <div>
+      <div className = "form-group">
 
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
 
@@ -41,7 +41,7 @@ state = {
           return (
             <div key={idx}>
           <label htmlFor={rankedChoice}> {`Choice #${idx + 1}:`} </label>
-          <select name={rankedChoice} value={`this.state.rankedChoice${idx + 1}`.value} data-id={idx} id={rankedChoice} className="rankedChoice" >
+          <select name={rankedChoice} value={`this.state.rankedChoice${idx + 1}`.value} id={rankedChoice} className="rankedChoice" >
             <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
             <option value={choice.id}> {choice.content}</option>)}</select>
@@ -64,4 +64,3 @@ state = {
 
 }
 export default connect(null, {createResponse})(NewResponseInput)
-//value={choices[idx].id}

@@ -4,8 +4,6 @@ import ResponsesContainer from '../containers/ResponsesContainer';
 
 const Survey = (props) => {
 
-
-  //debugger;
    let survey = props.surveys && props.surveys.find(survey => survey.attributes.name === props.match.params.name)
 
 
@@ -33,5 +31,3 @@ const Survey = (props) => {
 }
 
 export default Survey;
-//<ResponseInput {...routerProps} survey={survey} />} />}
-//<ResponsesContainer survey={survey}/>

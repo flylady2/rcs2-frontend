@@ -10,7 +10,7 @@ export function MultipleEmailsForm(props) {
   const blankEmail = {email: ''};
 
   const [emailState, setEmailState] = useState([
-    {email: ''}
+    {...blankEmail}
   ]);
 
   const addEmail = () => {
@@ -22,13 +22,12 @@ export function MultipleEmailsForm(props) {
     updatedEmails[e.target.dataset.idx][e.target.className] = e.target.value;
     setEmailState(updatedEmails);
   };
-  //const [respondentEmail, setRespondentEmail] = useState();
+
 
   const handleSubmit = (e) => {
-    //const emailArray = []
-    //debugger;
+  
     const emailArray = emailState.map(emailObj => ({
-      //emailArray.push({
+
         email: emailObj.email,
         survey_name: survey_name,
         response_link: response_link
