@@ -31,8 +31,7 @@ class NewSurveyInput extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-//    let survey = {
-//      ...this.state,
+//
 
 //    }
     this.props.createSurvey(this.state);
