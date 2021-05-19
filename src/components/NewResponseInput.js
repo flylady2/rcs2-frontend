@@ -44,7 +44,7 @@ state = {
           <select name={rankedChoice} value={`this.state.rankedChoice${idx + 1}`.value} id={rankedChoice} className="rankedChoice" >
             <option value={null}>Please select from the menu below</option>
             {survey.attributes.choices.map(choice =>
-            <option value={choice.id}> {choice.content}</option>)}</select>
+            <option value={choice.id} key={choice.id}> {choice.content}</option>)}</select>
             </div>
           )
         })}

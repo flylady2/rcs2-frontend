@@ -1,5 +1,7 @@
 import React from 'react';
-import ResponsesContainer from '../containers/ResponsesContainer';
+//import ResponsesContainer from '../containers/ResponsesContainer';
+import NewResponseInput from './NewResponseInput';
+import {Route} from 'react-router-dom';
 
 
 const Survey = (props) => {
@@ -20,8 +22,9 @@ const Survey = (props) => {
       </h3>
 
 
-
-      <ResponsesContainer survey={survey}/>
+        {survey && <Route exact path={`/surveys/${survey.attributes.name}/responses/new`}
+        render={(routerProps) =>
+          <NewResponseInput {...routerProps} survey={survey} />} />}
 
 
     </div>
