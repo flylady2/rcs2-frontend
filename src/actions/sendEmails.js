@@ -9,13 +9,6 @@ export function sendEmails(data) {
       method: "POST",
       body: JSON.stringify(data)
     })
-    .then(resp => resp.json())
-    .then(resp => console.log(resp))
-  //  .then(survey => dispatch({
-  //    type: 'CREATE_SURVEY',
-  //    payload: survey
-  //  }))
-
 
 
 }

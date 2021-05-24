@@ -6,12 +6,16 @@ import {createResponse} from '../actions/createResponse'
 
 class NewResponseInput extends React.Component {
 
-
-state = {
+  constructor(props) {
+    super(props);
+    this.state = {
       token: "",
       respondent_email: "",
       survey_id: parseInt(this.props.survey.id)
+      }
   }
+
+
 
 
   handleChange = (e) => {
