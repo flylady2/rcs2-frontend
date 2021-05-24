@@ -1,14 +1,14 @@
 import React from 'react';
 
 import {MultipleEmailsForm} from '../components/MultipleEmailsForm';
-//import {ResponseNumber} from '../components/ResponseNumber';
-//import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {deleteSurvey} from '../actions/deleteSurvey';
 import {ResponseNumber} from './ResponseNumber';
 
 class UserFunctions extends React.Component {
+
+
   handleOnClick = () => {
 
     this.props.deleteSurvey({id: this.props.survey.id});

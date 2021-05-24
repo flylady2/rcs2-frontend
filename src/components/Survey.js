@@ -1,5 +1,4 @@
 import React from 'react';
-//import ResponsesContainer from '../containers/ResponsesContainer';
 import NewResponseInput from './NewResponseInput';
 import {Route} from 'react-router-dom';
 

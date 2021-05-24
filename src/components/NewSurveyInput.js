@@ -5,21 +5,28 @@ import {createSurvey} from '../actions/createSurvey'
 
 class NewSurveyInput extends React.Component {
 
-  state = {
-    choices: [{content: ""}],
-    name: "",
-    user_email: "",
-    threshold: ""
+  constructor(props) {
+    super(props);
+    this.state = {
+      choices: [{content: ""}],
+      name: "",
+      user_email: "",
+      threshold: ""
+    }
   }
 
 
   handleChange = (e) => {
     if (["content"].includes(e.target.className)) {
+      
       let choices = [...this.state.choices]
       choices[e.target.dataset.id][e.target.className] = e.target.value
+
       this.setState({ choices})
+
     } else {
       this.setState({ [e.target.name]: e.target.value})
+
     }
   }
 
