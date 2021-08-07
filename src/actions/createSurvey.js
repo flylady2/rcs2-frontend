@@ -1,5 +1,4 @@
 export function createSurvey(data) {
-
   return (dispatch) => {
     fetch('http://localhost:3000/api/v1/surveys',{
       headers: {
@@ -10,11 +9,12 @@ export function createSurvey(data) {
       body: JSON.stringify(data)
     })
     .then(resp => resp.json())
-    .then(survey => dispatch({
-      type: 'CREATE_SURVEY',
-      payload: survey
-    }))
-
+    .then(survey => {
+      return dispatch({
+        type: 'CREATE_SURVEY',
+        payload: survey
+      })
+    })
 
   }
 }
