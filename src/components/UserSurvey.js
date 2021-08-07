@@ -13,12 +13,14 @@ const UserSurvey = (props) => {
   return (
     <div>
       <h2>
-        {survey ? survey.attributes.name : null}
+        Survey: {survey ? survey.attributes.name : null}
       </h2>
-      <h3>
+
+        <ul className="list-group">
         {choices && choices.map(choice =>
-          <li key={choice.id}> {choice.content}</li>)}
-      </h3>
+          <li key={choice.id} className="list-group-item"> <h4>{choice.content} </h4></li>)}
+        </ul>
+        <br></br>
 
       <UserFunctions survey={survey}/>
 
