@@ -5,6 +5,12 @@ import {Route, NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {deleteSurvey} from '../actions/deleteSurvey';
 import {ResponseNumber} from './ResponseNumber';
+import {LinkContainer} from 'react-router-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+
 
 class UserFunctions extends React.Component {
 
@@ -21,12 +27,32 @@ class UserFunctions extends React.Component {
 
     return (
       <div>
+        <Container>
+          <Row>
+            <Col>
 
-        {survey && <NavLink exact to={`/user/surveys/${survey.attributes.name}/responses`}>See how many responses this survey has</NavLink>}
+          <button onClick={this.handleOnClick}>
+            Delete this survey
+          </button>
+        </Col>
+          <br></br>
+          <br></br>
+        </Row>
+        <Row></Row>
+          <Row>
+            <Col>
+
+        {survey && <NavLink exact to={`/user/surveys/${survey.attributes.name}/responses`}><Button>See how many responses this survey has</Button></NavLink>}
         <br></br>
+        </Col>
 
-        {survey && <NavLink to={`/user/surveys/${survey.attributes.name}/responses/emails`}>Email Respondents</NavLink>}
 
+
+        <Col>
+        {survey && <LinkContainer to={`/user/surveys/${survey.attributes.name}/responses/emails`}><Button>Email Respondents</Button></LinkContainer>}
+      </Col>
+
+</Row>
 
 
         {survey && <Route exact path={`/user/surveys/${survey.attributes.name}/responses`}
@@ -38,12 +64,12 @@ class UserFunctions extends React.Component {
         {survey && <Route exact path={`/user/surveys/${survey.attributes.name}/responses/emails`} render={(routerProps) =>
         <MultipleEmailsForm {...routerProps} survey={survey} />} />}
         <br></br>
-
+        </Container>
 
         <br></br>
-        <button onClick={this.handleOnClick}>
-          Delete this survey
-        </button>
+          <Col>
+
+      </Col>
       </div>
     )
   }

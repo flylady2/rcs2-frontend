@@ -27,7 +27,7 @@ class UserFunctionsContainer extends React.Component {
           <UserSurvey {...routerProps} surveys={this.props.surveys}/>}/>
 
         <Route path='/user/surveys' render={(routerProps) =>
-          <UserSurveys {...routerProps} surveys={this.props.surveys} />}/>
+          <UserSurveys {...routerProps} surveys={this.props.surveys}/>}/>
 
 
 
